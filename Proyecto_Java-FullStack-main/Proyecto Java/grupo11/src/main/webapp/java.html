@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Java - Programación y Testing</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="./styles/formulario.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <style>
+        /* Estilos personalizados */
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 0px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .btn {
+            margin-top: 0px;
+        }
+        .course-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        .course-info img {
+            max-width: 150px; /* Tamaño de la imagen */
+            margin-right: 10px;
+        }
+        .navbar-custom {
+            background-color: #6c757d !important;
+        }
+        .nav-link.cursos, 
+        .nav-link.consultas {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-custom">
+                <div class="container-fluid">
+                    <!-- Logo y búsqueda a la izquierda -->
+                    <div class="d-flex align-items-center">
+                        <a class="navbar-brand" href="./home.html">
+                            <img src="./icons/logo.svg" alt="Home" width="35" height="40">
+                        </a>
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Buscar curso" aria-label="Search">
+                            <button class="btn btn-outline-success btn" type="submit">
+                                <img src="./icons/search.svg" alt="Lupa búsqueda" width="20" height="20">
+                            </button>
+                        </form>
+                    </div>
+                    <!-- Botón de toggler para dispositivos móviles -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!-- Menú a la derecha -->
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle cursos" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">Cursos</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                                    <li class="dropdown-submenu">
+                                        <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">Programación y Testing</a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                                            <li><a class="dropdown-item" href="./python.html">Python</a></li>
+                                            <li><a class="dropdown-item" href="./java.html">Java</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link consultas" href="formularioDeConsultas.html">Consultas</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main class="mainFormularios">
+            <div class="container">
+                <div class="course-info">
+                    <img src="img/10.webp" alt="Imagen 1">
+                </div>
+                <div class="course-title text-center">
+                    <h1>Programación y Testing</h1>
+                </div>
+                <br>
+                <p>
+                    Bienvenido al curso de Java de nuestro grupo. En este curso aprenderás los fundamentos de la programación con Java, incluyendo conceptos básicos, estructuras de control, funciones, y más. Además, exploraremos cómo aplicar estos conocimientos en el contexto de pruebas y testing de software.
+                </p>
+                <p>
+                    Java es un lenguaje de programación popular y versátil utilizado en una amplia variedad de aplicaciones, desde desarrollo de software hasta aplicaciones móviles y desarrollo web.
+                </p>
+                <a href="#" class="btn btn-primary">Inscribirse</a>
+            </div>
+        </main>
+        <footer>
+            <div class="left-section">
+                <a href="#">
+                    <p>Facebook
+                        <img src="./icons/facebook.svg" alt="Facebook" width="35" height="40">
+                    </p>
+                </a>
+                <a href="#">
+                    <p>Twitter
+                        <img src="./icons/twitterx.svg" alt="Twitter" width="35" height="40">
+                    </p>
+                </a>
+                <a href="#">
+                    <p>Instagram
+                        <img src="./icons/instagram.svg" alt="Instagram" width="35" height="40">
+                    </p>
+                </a>
+            </div>
+            <div class="middle-section">
+                <a class="navbar-brand" href="./home.html">
+                    <!-- Agrega la clase de animación al logo -->
+                    <img src="./icons/logo.svg" alt="Logo" class="footer-logo animate__animated animate__bounce">
+                </a>
+            </div>
+            <div class="right-section">
+                <a href="./aboutUs.html">
+                    <p>About Us</p>
+                </a>
+            </div>
+        </footer>
+    </div>
+    <!-- Scripts de Bootstrap y jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <!-- Ruta relativa correcta para el archivo CSS -->
+    <link rel="stylesheet" href="./styles/indexx.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="background">
+        <div class="rectangle">
+            <img src="./icons/logo.svg" alt="Logo" class="icon">
+            <p class="font-weight-bold">DIGITAL</p>
+            <div class="rectangle-content">
+                <p>Para reajustar su contraseña, envíe su nombre de usuario o su dirección de correo electrónico. Si podemos encontrarlo en la base de datos, le enviaremos un email con instrucciones para poder acceder de nuevo.</p>
+                <form class="register-form" action="" method="post" id="register" onsubmit="return validarCambioDeContraseña(event)">
+                    <div class="register-form-username form-group">
+                        <label for="reg-username" class="sr-only">Buscar por nombre de usuario</label>
+                        <input type="text" name="username" id="reg-username" class="form-control form-control-lg" value="" placeholder="Nombre de usuario" autocomplete="username">
+                        <div id="usernameError" class="text-danger"></div>
+                    </div>
+                    <div class="register-form-email form-group">
+                        <label for="reg-email" class="sr-only">Buscar por dirección email</label>
+                        <input type="email" name="email" id="reg-email" class="form-control form-control-lg" value="" placeholder="Dirección de correo" autocomplete="email">
+                        <div id="emailError" class="text-danger"></div>
+                    </div>
+                    <div class="register-form-submit form-group">
+                        <button class="btn btn-primary btn-lg" type="submit" id="registerbtn">Buscar</button>
+                    </div>
+                </form>
+            </div>
+            <div class="register-form-login-link">
+                <p>¿Ya tienes una cuenta? <a href="index.html">Iniciar sesión</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./Scripts/Validacion.js"></script>
+</body>
+</html>

@@ -1,0 +1,280 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* Asegura que el body y el html ocupen toda la altura de la ventana */
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el contenedor ocupe al menos la altura de la ventana */
+}
+
+main {
+    flex: 1; /* Asegura que el contenido principal tome todo el espacio disponible */
+}
+
+header {
+    margin-top: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color:rgb(165, 166, 226) ;
+    z-index: 1000; /* Asegura que la barra de navegación esté por encima de todo */
+}
+
+.course-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+#carouselExample {
+    position: relative; /* Establece la posición relativa para que los elementos dentro del carousel se posicionen correctamente */
+    z-index: 0; /* Establece un índice z detrás de la barra de navegación */
+}
+
+.navbar-custom .nav-link {
+    color: rgb(243, 238, 238); 
+}
+
+.navbar-custom .nav-link:hover {
+    color: #0b0b0e; 
+}
+
+.carousel-container {
+    border: 2px solid #ddd; /* Borde delgado de color gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+    overflow: hidden; /* Evita que el borde afecte el diseño */
+}
+
+.img1-enlarge, .img3-enlarge {
+    width: 100%; /* Ancho al 100% */
+    height: auto; /* Altura automática para mantener la proporción */
+    max-width: none; /* No hay ancho máximo */
+}
+
+footer {
+    text-align: center;    
+}
+
+footer li {
+    display: inline;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+/* CARDS */
+
+.tarjetas{
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Efecto de acercamiento */
+}
+
+.cards a {
+    color: inherit; /* Utiliza el color heredado del texto */
+    text-decoration: none; /* Elimina el subrayado */
+}
+
+.cards {
+    width: 400px; /* Ajusta el ancho de las cards */
+    height: 350px; /* Ajusta la altura de las cards */
+    background-color: #f0f0f0; /* Color de fondo gris */
+    border-radius: 10px; /* Ajusta el radio del borde */
+    transition: transform 0.3s ease; /* Agrega una transición para el efecto de acercamiento */
+    margin: 50px; /* Espaciado entre las cards */
+    overflow: hidden; /* Asegura que el contenido no se salga de los bordes */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Asegura que el contenido se distribuya correctamente */
+}
+
+.cards:hover {
+    transform: scale(1.05); /* Efecto de acercamiento */
+}
+
+@media only screen and (min-width: 300px) and (max-width: 800px) {
+    .tarjetas, .cards{
+        margin: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.custom-img{
+    width: 150px;
+    height: auto;
+}
+
+/* Estilo para posicionar "Python" y "Java" a la derecha */
+.dropdown-submenu .dropdown-menu {
+    position: absolute;
+    top: 87%;
+    left: 0%; /* Coloca el menú a la derecha */
+    display: none;
+}
+
+/* Mostrar el menú al pasar el cursor sobre el submenu */
+.dropdown-submenu:hover .dropdown-menu {
+    display: block;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    width: 50px; /* Define el ancho deseado */
+    height: 50px; /* Define la altura deseada */
+    top: 20%; /* Ajusta la posición vertical */
+    transform: translateY(0%); /* Ajusta la posición vertical */
+    background-color:rgb(165, 166, 226) ;
+}
+.carousel-overlay {
+    position: relative;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 23px;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgba(165, 166, 226, 0.5);
+    border-radius: 3px;
+    font-family: wfont_dd8e13_a22bac37132b4bcb861e34b364803b04, wf_a22bac37132b4bcb861e34b36, orig_barlow_bold;
+    width: 18%; /* Aumenta el ancho del encuadre */
+    height: 35px; /* Aumenta la altura del encuadre */
+}    
+
+.overlay-subtext {
+    position: absolute;
+    bottom: 40%; /* Ajusta este valor para mover el texto más arriba */
+    left: 30%;
+    transform: translateX(-50%);
+    color: white;
+    padding: 10px;
+    text-align: left;
+    font-size: 2.2rem; /* Tamaño de la letra aumentado */
+    font-family: orig_barlow_condensed_semibold
+}
+.overlay-subbtext{
+    position: absolute;
+    bottom: 40%; /* Ajusta este valor para mover el texto más arriba */
+    left: 34%;
+    transform: translateX(-50%);
+    color: white;
+    padding: 10px;
+    text-align: left;
+    font-size: 2.2rem; /* Tamaño de la letra aumentado */
+    font-family: wfont_dd8e13_f264c68499544a57ba033f00b62546e7, wf_f264c68499544a57ba033f00b, orig_barlow_condensed_semibold
+}
+
+.underline-text {
+    position: relative;
+}
+
+.underline-text::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.2em; /* Ajusta este valor según tu preferencia */
+    width: 100%;
+    border-bottom: 3px solid rgb(150, 163, 235); /* Estilo y color del subrayado */
+}
+
+.button-container {
+    position: absolute;
+    bottom: 31%;
+    left: 21%;
+    transform: translateX(-50%);
+    text-align: center;
+    background-color: #ffffff; /* Cambia #ff0000 al color de fondo deseado */
+    border-radius: 5px;
+}
+
+.button-container:hover {
+    background-color: #858ce7; 
+    color: #f5f5f5; 
+}
+
+.navbar-toggler {
+    border: none; /* Borde */
+    color: #333; /* Color del botón */
+    cursor: pointer; /* Cursor al pasar sobre el botón */
+    font-size: 1.25rem; /* Tamaño de fuente */
+    outline: none; /* Elimina el contorno al hacer clic */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); /* Ícono del botón */
+}
+
+.navbar-custom {
+    background-color: #6c757d;
+}
+
+/* Estilos para la barra de navegación con color gris */
+.navbar-scrolled {
+    background-color: #6d6a6a !important; /* Color gris */
+}
+
+.titulo-cursos {
+    text-align: center; /* Centra el subtítulo */
+    margin-top: 80px; /* Margen superior */
+    margin-bottom: 50px; /* Margen inferior */
+    position: relative; /* Establece la posición relativa */
+    font-size: 30px;
+    color: #333; /* Color del texto */
+    font-weight: bold; /* Negrita */
+    position: relative; /* Establece la posición relativa */
+}
+
+.titulo-cursos::before, .titulo-cursos::after {
+    content: ""; /* Contenido generado */
+    position: absolute; /* Establece la posición absoluta */
+    top: 50%; /* Centra verticalmente */
+    width: 20%; /* Ancho del elemento */
+    height: 1px; /* Altura de la línea */
+    background-color: rgb(143, 156, 230); /* Color de la línea */
+}
+
+.titulo-cursos::before {
+    left: 0; /* Línea a la izquierda */
+    transform: translateY(-50%); /* Ajusta la posición verticalmente */
+}
+
+.titulo-cursos::after {
+    right: 0; /* Línea a la derecha */
+    transform: translateY(-50%); /* Ajusta la posición verticalmente */
+}
+
+.btn {
+    margin-top: 0px;
+    color: rgb(118, 118, 216);
+}
+.course-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.course-info img {
+    max-width: 150px; /* Tamaño de la imagen */
+    margin-right: 10px;
+}

@@ -1,0 +1,45 @@
+footer {
+    background-color: #abcfe4;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Asegura que el footer ocupe todo el ancho */
+}
+
+/* Estilo del texto a la izquierda */
+.left-section {
+    flex: 1;
+}
+
+/* Estilo de la imagen en el medio */
+.middle-section {
+    flex: 1;
+    text-align: center;
+}
+
+.middle-section img {
+    max-width: 100%;
+    max-height: 100px; /* Ajusta la altura de la imagen según tus necesidades */
+}
+
+/* Espacio vacío a la derecha */
+.right-section {
+    flex: 1;
+}
+
+footer a{
+    text-decoration: none;
+    color: black;
+}
+
+.footer ul{
+    padding: 20px;
+}
+.left-section a:hover,
+.middle-section a:hover,
+.right-section a:hover {
+    text-decoration: none;
+    color: #4d4ddb;
+}

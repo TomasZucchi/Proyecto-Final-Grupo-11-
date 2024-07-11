@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Consulta</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="./styles/formulario.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-custom">
+                <div class="container-fluid">
+                    <!-- Logo y búsqueda a la izquierda -->
+                    <div class="d-flex align-items-center">
+                        <a class="navbar-brand" href="./home.html">
+                            <img src="./icons/logo.svg" alt="Home" width="35" height="40">
+                        </a>
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Buscar curso" aria-label="Search">
+                            <button class="btn btn-outline-success btn" type="submit">
+                                <img src="./icons/search.svg" alt="Lupa búsqueda" width="20" height="20">
+                            </button>
+                        </form>
+                    </div>
+                    <!-- Botón de toggler para dispositivos móviles -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!-- Menú a la derecha -->
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle cursos" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">Cursos</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                                    <li class="dropdown-submenu">
+                                        <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">Programación y Testing</a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                                            <li><a class="dropdown-item" href="./python.html">Python</a></li>
+                                            <li><a class="dropdown-item" href="./java.html">Java</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link consultas" href="formularioDeConsultas.html">Consultas</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main class="mainFormularios">
+            <section>
+                <div class="mainFormularios">
+                    <div class="tituloConsulta">
+                        <h3>Consulta</h3>
+                    </div>
+                    <div class="explicacionConsulta">
+                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+                            Possimus, facere sapiente libero consequuntur iusto <br>
+                             obcaecati, exercitationem provident porro illum quis <br>
+                              sit voluptatem amet ea atque!</span>
+                    </div>
+                    <form action="" method="post" target="_blank" onsubmit="return validarConsulta(event)">
+                        <div class="casillaConsulta">
+                            <label for="email"></label>
+                            <div class="input-group mb-2">
+                                <input type="email" class="form-control" placeholder="Email" id="email" aria-label="Email" aria-describedby="basic-addon2">
+                                <div id="emailError" class="text-danger"></div>
+                            </div>
+                            <label for="consulta"></label>
+                            <div class="input-group">
+                                <textarea class="form-control" aria-label="With textarea" placeholder="Consulta" id="consulta"></textarea>
+                                <div id="consultaError" class="text-danger"></div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar consulta</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="left-section">
+                <a href="#">
+                    <p>Facebook
+                        <img src="./icons/facebook.svg" alt="Facebook" width="35" height="40">
+                    </p>
+                </a>
+                <a href="#">
+                    <p>Twitter
+                        <img src="./icons/twitterx.svg" alt="Twitter" width="35" height="40">
+                    </p>
+                </a>
+                <a href="#">
+                    <p>Instagram
+                        <img src="./icons/instagram.svg" alt="Instagram" width="35" height="40">
+                    </p>
+                </a>
+            </div>
+            <div class="middle-section">
+                <a class="navbar-brand" href="./home.html">
+                    <!-- Agrega la clase de animación al logo -->
+                    <img src="./icons/logo.svg" alt="Logo" class="footer-logo animate__animated animate__bounce">
+                </a>
+            </div>
+            <div class="right-section">
+                <a href="./aboutUs.html">
+                    <p>About Us</p>
+                </a>
+            </div>
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./Scripts/Validacion.js"></script>
+</body>
+</html>

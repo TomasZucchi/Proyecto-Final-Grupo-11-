@@ -1,0 +1,62 @@
+.mainFormularios{
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en una columna */
+    align-items: center; /* Centra horizontalmente los elementos en la columna */
+    text-align: center;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.boton > *{
+    margin: 15px 0;
+    border-radius: 5px;
+    border: none;
+    width:23vw;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 650px) {
+    .boton > *{
+        width:150px;
+    }
+}
+
+.casillaConsulta{
+    margin: 12px 0;
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en una columna */
+    align-items: center; /* Centra horizontalmente los elementos en la columna */
+    text-align: center;
+}
+
+.casillaConsulta > textarea{
+    resize: none;
+}
+
+.casillaConsulta > *{
+    margin: 6px; /* Espacio entre cada elemento */
+    border-radius: 5px;
+}
+.casillas{
+    margin: 12px 0;
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en una columna */
+    align-items: center; /* Centra horizontalmente los elementos en la columna */
+    text-align: center;
+}
+.casillas > * {
+    margin-bottom: 3px; /* Espacio entre cada elemento */
+    border-radius: 5px;
+}
+.condiciones-politica{
+    margin: 15px 0;
+}
+
+.explicacionConsulta{
+    margin: 15px 0;
+}
+
